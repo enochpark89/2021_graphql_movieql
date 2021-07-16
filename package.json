@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/enochpark89/2021_movieql/issues"
   },
-  "homepage": "https://github.com/enochpark89/2021_movieql#readme"
+  "homepage": "https://github.com/enochpark89/2021_movieql#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
 }
