@@ -1,0 +1,22 @@
+{
+  "name": "2021_movieql",
+  "version": "1.0.0",
+  "description": "Movie API with Graphql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enochpark89/2021_graphql_movieql.git"
+  },
+  "keywords": [
+    "movieapi"
+  ],
+  "author": "Enoch Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enochpark89/2021_movieql/issues"
+  },
+  "homepage": "https://github.com/enochpark89/2021_movieql#readme"
+}
