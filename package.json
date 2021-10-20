@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Movie API with Graphql",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/enochpark89/2021_graphql_movieql.git"
@@ -20,6 +17,15 @@
   },
   "homepage": "https://github.com/enochpark89/2021_movieql#readme",
   "dependencies": {
-    "graphql-yoga": "^1.18.3"
+    "babel-node": "^0.0.1-security",
+    "graphql-yoga": "^0.8.5"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1"
   }
 }
