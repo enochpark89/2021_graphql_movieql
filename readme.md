@@ -111,7 +111,7 @@ server.start(() => console.log("Graphql Server Running"));
 *What is schema?*
 - Schema is a description of data that you are going to GIVE to the user or GET from the user.
 
-# Creating the first Query and Resolver
+# 3.0. Creating the first Query and Resolver
 
 - **Schema:** describe what are you going to get or send. 
 - Create a new folder called graphql and create schema.graphql.
@@ -167,3 +167,85 @@ Output:
 Graphql Server Running
 
 - If you go to localhost:4000, you will see the GraphQL playground.
+
+# 4.0. Extending the Schema 
+
+- Playground is where you can test yoru code in GraphQL. 
+- The root is the palyground. 
+- One advantage of GraphQL is that you can 
+
+schema.graphql
+```js
+type Nicolas {
+  name: String!
+  age: Int!
+  gender: String!
+}
+
+type Query {
+  person: Nicolas!
+}
+// GraphQL takes in type Nicolas which is a person who takes string name, Integer age, and gender string.
+
+```
+
+
+resolver.js
+```js
+const nicolas = {
+  name: "Nicolas",
+  age: 18,
+  gender: "female"
+};
+// resolver will take the user's query into nicolas const with many different information.
+const resolvers = {
+  Query: {
+    person: () => nicolas
+  }
+};
+export default resolvers;
+
+```
+
+Playground:
+
+Input:
+```js
+# Try to write your query here
+query {
+  person {
+    age
+  }
+}
+```
+Output:
+```js
+{
+  "data": {
+    "person": {
+      "age": 18
+    }
+  }
+}
+```
+
+- More complex query.
+   - Query - we are here.
+   - Mutation
+   - Subscription
+
+scehma.graphql
+```js
+type Person {
+  name: String!
+  age: Int!
+  gender: String!
+}
+
+type Query {
+  person: [Person]!
+  person(id: Int!): Person!
+}
+// Send many person.
+// Maybe we won't find many persons.
+```
