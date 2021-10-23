@@ -1,31 +1,24 @@
 {
-  "name": "2021_movieql",
+  "name": "movieql",
   "version": "1.0.0",
   "description": "Movie API with Graphql",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/enochpark89/2021_graphql_movieql.git"
-  },
-  "keywords": [
-    "movieapi"
-  ],
-  "author": "Enoch Park",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/enochpark89/2021_movieql/issues"
-  },
-  "homepage": "https://github.com/enochpark89/2021_movieql#readme",
+  "repository": "https://github.com/nomadcoders/movieql",
+  "author": "Nicolas Serrano Arevalo<nico@nomadcoders.co>",
+  "license": "MIT",
   "dependencies": {
-    "babel-node": "^0.0.1-security",
+    "axios": "^0.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "graphql-yoga": "^0.8.5"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node index.js"
+    "start": "babel-node src/index.js",
+    "dev": "nodemon --exec babel-node src/index.js"
   },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-3": "^6.24.1"
+  "now": {
+    "alias": "movieql"
   }
 }
